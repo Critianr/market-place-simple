@@ -1,0 +1,61 @@
+// Typography
+
+$appFont: "Hind Vadodara", sans-serif;
+$mainColor: #222222;
+$secondColor: #777777cc;
+$headerColor: #272727e3;
+$blueLink: #385cde;
+
+.logo {
+  color: $headerColor;
+  font-size: 40px;
+  letter-spacing: -0.1em;
+}
+
+h1 {
+  color: $headerColor;
+  font-weight: bold;
+  font-size: 45px;
+}
+h2 {
+  color: $headerColor;
+  font-weight: bold;
+  font-size: 30px;
+
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
+}
+
+h4 {
+  color: $secondColor;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $appFont;
+}
+
+.custom-search-select {
+  font-family: $appFont;
+  font-size: 12px;
+  border-radius: 5px;
+  color: silver;
+  margin-bottom: 15px;
+  padding: 3px 2px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid silver;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
+}

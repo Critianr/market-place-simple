@@ -1,0 +1,72 @@
+@import "../../../style";
+
+//logo
+
+.logo-img {
+  color: rgb(229, 240, 240);
+  // background: azure;
+  height: auto;
+  max-width: 100px;
+  height: 80px;
+}
+.nav-link {
+  color: #222;
+  // color: $secondColor;
+  font-size: 24px;
+  font-weight: lighter;
+}
+.cart-size {
+  font-size: 18px;
+}
+.nav-link:hover {
+  color: $headerColor !important;
+}
+.navbar-expand-lg {
+  color: rgb(172, 172, 172) !important;
+  background: rgb(0, 173, 101) !important;
+}
+.navbar {
+  background-color: #50de7712;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+
+  @media (min-width: 768px) {
+    text-align: right;
+    justify-content: inherit;
+  }
+}
+
+.navbar-sticky {
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 1px #222;
+  animation: moveDown 0.5s ease-in-out;
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0rem);
+  }
+}
