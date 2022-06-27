@@ -8,7 +8,7 @@ import app from "../../firebase";
 
 function Nav({ sticky }) {
   const { currentUser } = useContext(AuthContext);
-  const [cart, setCart] = useContext(CartContext);
+  // const [cart, setCart] = useContext(CartContext);
 
   return (
     <nav className="navbar navbar-expand-lg text-white">
@@ -42,7 +42,7 @@ function Nav({ sticky }) {
             <Link className="nav-link text-white" to="/cart">
               {" "}
               <i className="fas fa-shopping-bag pr-3"></i>My cart{" "}
-              <span className="cart-size">( {cart.length} )</span>
+              {/* <span className="cart-size">( {cart.length} )</span> */}
             </Link>
           </li>
         </ul>

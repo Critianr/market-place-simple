@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 
 //Custom Components
 import SelectQty from "../Select/index";
-
+// 
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 //Context and API
 import { CartContext } from "../../CartContext";
 import { ProductContext } from "../../ProductsContext";
@@ -12,8 +13,8 @@ import { ProductContext } from "../../ProductsContext";
 import "./assets/style.scss";
 
 function PlantCard() {
-  const [cart, setCart] = useContext(CartContext);
-  const [products] = useContext(ProductContext);
+  // const [cart, setCart] = useContext(CartContext);
+  // const [products] = useContext(ProductContext);
   const [selected, setSelect] = useState(0);
 
   const arrayOfData = [
@@ -54,26 +55,26 @@ function PlantCard() {
       quantity: parseInt(selected),
     };
 
-    if (productData.quantity !== 0) {
-      API.getCart().then((res) => {
-        let shoppingCart = res.data;
-        let result = shoppingCart.some(
-          (el) => productData.tagNumber === el.tagNumber
-        );
+    // if (productData.quantity !== 0) {
+    //   API.getCart().then((res) => {
+    //     let shoppingCart = res.data;
+    //     let result = shoppingCart.some(
+    //       (el) => productData.tagNumber === el.tagNumber
+    //     );
 
-        //quantity it's not updating, why? at least it's not being duplicated.
-        if (result) {
-          let id = item.tagNumber;
-          API.updateCart(id, productData).then((req, res) => {});
-        } else {
-          API.addToCart(productData).then((req, res) => {
-            setCart([...cart, productData]);
-          });
-        }
-      });
-    } else {
-      return;
-    }
+    //     //quantity it's not updating, why? at least it's not being duplicated.
+    //     if (result) {
+    //       let id = item.tagNumber;
+    //       API.updateCart(id, productData).then((req, res) => {});
+    //     } else {
+    //       API.addToCart(productData).then((req, res) => {
+    //         setCart([...cart, productData]);
+    //       });
+    //     }
+    //   });
+    // } else {
+    //   return;
+    // }
 
     //...the spread oprator makes a copy of the array
   }
@@ -87,9 +88,11 @@ function PlantCard() {
           Ofertas, y entregas en el mismo dia
         </h4>
       </div>
+{/* original */}
+<ShoppingCart />
 
-      <div className="plants-container">
-        {products.map((item) => (
+      {/* <div className="plants-container"> */}
+        {/* {products.map((item) => (
           <div className="plants-item">
             <img
               key={item._id}
@@ -117,8 +120,8 @@ function PlantCard() {
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        ))} */}
+      {/* </div> */}
     </div>
   );
 }

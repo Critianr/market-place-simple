@@ -6,11 +6,11 @@ import { ProductProvider } from "./ProductsContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductProvider>
-      <CartProvider>
+    {/* <ProductProvider> */}
+      {/* <CartProvider> */}
         <App />
-      </CartProvider>
-    </ProductProvider>
+      {/* </CartProvider> */}
+    {/* </ProductProvider> */}
   </React.StrictMode>,
 
   document.getElementById("root")
